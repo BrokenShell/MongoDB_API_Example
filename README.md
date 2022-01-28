@@ -1,4 +1,4 @@
-# MongoBD API Example
+# MongoDB API Example
 
 ## Abstract
 For educational purposes only, use with caution.
