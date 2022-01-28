@@ -5,7 +5,7 @@ from app.data import MongoDB
 
 API = FastAPI(
     title="MongoDB API",
-    version="0.0.1",
+    version="0.0.2",
     docs_url="/",
     description="Example MongoDB API",
 )
@@ -30,4 +30,22 @@ async def version():
 async def create(data: dict):
     """ Creates a new record """
     API.db.create(data)
-    return {"created": data}
+    return {"result": data}
+
+
+@API.post("/read")
+async def read(data: dict):
+    """ Returns records based on query """
+    return {"result": API.db.read(data)}
+
+
+@API.post("/update")
+async def update(query: dict, update_data: dict):
+    """ Returns the count of the updated records """
+    return {"result": API.db.update(query, update_data)}
+
+
+@API.post("/search")
+async def search(user_search: str):
+    """ Returns all records that match the user_search """
+    return {"result": API.db.search(user_search)}
