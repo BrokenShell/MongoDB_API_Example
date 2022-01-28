@@ -29,12 +29,9 @@ class MongoDB:
 
 
 if __name__ == '__main__':
-    mongo = MongoDB("TestCluster", "TestTable")
+    mongo = MongoDB("TestDatabase", "TestCollection")
     # mongo.delete({})
-    # mongo.create({
-    #     "id": 987654321,
-    #     "Name": "Tony Stark",
-    # })
+    # mongo.create({"id": 987654321, "Name": "Tony Stark"})
     # mongo.update({"id": 987654321}, {"Name": "Ironman"})
-    # mongo.create({'id': 123456789, 'Name': 'Steve Rodgers'})
+    # mongo.create({"id": 123456789, "Name": "Steve Rodgers"})
     print(*mongo.read({}))
