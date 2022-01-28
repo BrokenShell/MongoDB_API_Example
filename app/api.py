@@ -23,14 +23,13 @@ API.add_middleware(
 
 @API.get("/version")
 async def version():
-    return {"version": API.version}
+    return {"result": API.version}
 
 
 @API.post("/create")
 async def create(data: dict):
     """ Creates a new record """
-    API.db.create(data)
-    return {"result": data}
+    return {"result": API.db.create(data)}
 
 
 @API.post("/read")
