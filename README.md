@@ -2,7 +2,7 @@
 
 ## Abstract
 For educational purposes only, use with caution.
-This code base is intended to be a simple example of a MongoDB API. 
+This codebase is intended to be a simple example of a MongoDB API. 
 Production environments may have additional concerns that are not addressed here.
 
 ## Tech Stack
