@@ -10,7 +10,7 @@ API = FastAPI(
     description="Example MongoDB API",
 )
 
-API.db = MongoDB("TestCluster", "TestTable")
+API.db = MongoDB("TestDatabase", "TestCollection")
 
 API.add_middleware(
     CORSMiddleware,
